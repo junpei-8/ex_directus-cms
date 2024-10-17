@@ -1,3 +1,4 @@
+version: "3"
 services:
   database:
     image: postgis/postgis:13-master
@@ -31,7 +32,7 @@ services:
     ports:
       - 8055:8055
     volumes:
-      - ./uploads:/directus
+      - ./uploads:/directus/uploads
       - ./extensions:/directus/extensions
     depends_on:
       database:
